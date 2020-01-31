@@ -1618,5 +1618,9 @@
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
+    <message id="11033" name="WING_ANGLE">
+      <description>Wing Angle of Tilt Wing aircraft.</description>
+      <field type="float" name="angle" units="degrees">Wing Angle, 90 is vertical, 0 is horizontal.</field>
+    </message>
   </messages>
 </mavlink>
