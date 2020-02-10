@@ -1015,6 +1015,14 @@
       <entry value="10" name="TRACKER_MODE_AUTO"/>
       <entry value="16" name="TRACKER_MODE_INITIALIZING"/>
     </enum>
+    <enum name="WING_ANGLE_CMD">
+      <description>Commands to Wing Angle module for TAC Tiltwing.</description>
+      <entry value="0" name="WA_CMD_NONE"/>
+      <entry value="1" name="WA_CMD_CALIBRATE"/>
+      <entry value="2" name="WA_CMD_CANCEL_CALIBRATE"/>
+      <entry value="3" name="WA_CMD_NEW_SETPOINT"/>
+      <entry value="4" name="WA_CMD_CLEAR_SETPOINT"/>
+    </enum>
   </enums>
   <messages>
     <message id="150" name="SENSOR_OFFSETS">
@@ -1621,6 +1629,11 @@
     <message id="11033" name="WING_ANGLE">
       <description>Wing Angle of Tilt Wing aircraft.</description>
       <field type="float" name="angle" units="degrees">Wing Angle, 90 is vertical, 0 is horizontal.</field>
+    </message>
+    <message id="11034" name="WING_ANGLE_CMD">
+      <description>Wing Angle of Tilt Wing aircraft.</description>
+      <field type="uint8_t" name="command" >Value from WING_ANGLE_CMD enum.</field>
+      <field type="float" name="setpoint_angle" units="degrees">Setpoint for Wing Angle, 90 is vertical, 0 is horizontal.</field>
     </message>
   </messages>
 </mavlink>
